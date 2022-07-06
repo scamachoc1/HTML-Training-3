@@ -91,6 +91,20 @@ header img {
     position: relative;
 }
 
+#main-1::after,
+#main-2::after,
+#main-3::after,
+#main-4::after,
+#main-5::after{
+    position: absolute;
+    content: '';
+    width: 25rem;
+    height: 2px;
+    background: var(--cute-green);
+    bottom: 0;
+    left: calc(50% - 12.5rem);
+}
+
 .floating-number {
     font-family: 'montbold';
     font-size: 20rem;
@@ -100,12 +114,19 @@ header img {
     opacity: .3;
 }
 
-.floating-number#right{
+.floating-number#right {
     right: calc(-25% - 2rem);
 }
-.floating-number#left{
+
+.floating-number#left {
     left: calc(-25% - 2rem);
 }
+
+
+/*main:nth-child(even) {
+    left: calc(-25% - 2rem);
+}
+*/
 
 .button {
     display: inline-block;
@@ -147,29 +168,32 @@ header img {
 
 
 /*main 5*/
-#main-5 ul{
+#main-5 ul {
     list-style: none;
     margin: 3rem 0;
 }
 
-#main-5 ul li img{
+#main-5 ul li img {
     max-width: 1rem;
     margin-right: .5rem;
 }
 
-#main-5 li{
+#main-5 li {
     margin: .5rem 0;
     font-size: 1.5rem;
 }
+
 /* last section*/
 #last-section {
     background-color: var(--cute-green);
     position: relative;
 }
-#last-section img{
+
+#last-section img {
     max-width: 100%;
 }
-#last-section .wrapper{
+
+#last-section .wrapper {
     max-width: 30rem;
     position: absolute;
     top: calc(50% - 5rem);
@@ -183,6 +207,8 @@ header img {
 #last-section .button {
     display: inline-block;
     background: var(--bg-color);
+    margin: 1rem 0;
+
 }
 
 /*FOOTER*/
