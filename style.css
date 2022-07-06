@@ -95,7 +95,7 @@ header img {
 #main-2::after,
 #main-3::after,
 #main-4::after,
-#main-5::after{
+#main-5::after {
     position: absolute;
     content: '';
     width: 25rem;
@@ -114,13 +114,20 @@ header img {
     opacity: .3;
 }
 
-.floating-number#right {
+
+main > div:nth-child(even)> .floating-number{
+    left: calc(-25% - 2rem);
+}
+main > div:nth-child(odd)> .floating-number{
+    right: calc(-25% - 2rem);
+}
+/*.floating-number#right {
     right: calc(-25% - 2rem);
 }
 
 .floating-number#left {
     left: calc(-25% - 2rem);
-}
+}*/
 
 
 /*main:nth-child(even) {
