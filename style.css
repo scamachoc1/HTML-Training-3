@@ -196,7 +196,7 @@ main>div:nth-child(odd)>.floating-number {
     background-color: var(--cute-green);
     background-image: url('./assets/bg.png');
     background-size: cover;
-    
+
     padding: 4rem 0;
 
     display: flex;
@@ -208,6 +208,18 @@ main>div:nth-child(odd)>.floating-number {
 /*
 If we use this below, we have to add relative to 
 #last-section and absolute to #last-section.wrapper
+
+#last-section {
+    background-color: var(--cute-green);
+    position: relative;
+}
+
+#last-section .wrapper {
+    max-width: 30rem;
+    position: absolute;
+    top: calc(50% - 5rem);
+    left: calc(50% - 15rem);
+}
 
 #last-section::before {
     display: inline-block;
