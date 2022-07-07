@@ -14,7 +14,8 @@ html {
 h1,
 h2,
 h3,
-.button {
+.button,
+ul {
     font-family: 'montbold';
 }
 
@@ -57,12 +58,7 @@ footer {
 
 main {
     background: #f9f9f9;
-}
-
-
-header,
-footer {
-    background: var(--bg-color);
+    overflow: hidden;
 }
 
 
@@ -79,23 +75,32 @@ header img {
 }
 
 #main h3,
-#main-1,
-#main-2,
-#main-3,
-#main-4,
-#main-5,
-#main-6 {
-    max-width: 60%;
+.main-1,
+.main-2,
+.main-3,
+.main-4,
+.main-5,
+.main-6 {
+    width: 60%;
+    max-width: 36rem;
     margin: auto;
     padding: 5rem 0;
     position: relative;
 }
+.main-1 img,
+.main-2 img,
+.main-3 img,
+.main-4 img,
+.main-5 img,
+.main-6 img{
+    max-width: 20%;
+}
 
-#main-1::after,
-#main-2::after,
-#main-3::after,
-#main-4::after,
-#main-5::after {
+.main-1::after,
+.main-2::after,
+.main-3::after,
+.main-4::after,
+.main-5::after {
     position: absolute;
     content: '';
     width: 25rem;
@@ -114,26 +119,13 @@ header img {
     opacity: .3;
 }
 
-
-main > div:nth-child(even)> .floating-number{
+main>div:nth-child(even)>.floating-number {
     left: calc(-25% - 2rem);
 }
-main > div:nth-child(odd)> .floating-number{
+
+main>div:nth-child(odd)>.floating-number {
     right: calc(-25% - 2rem);
 }
-/*.floating-number#right {
-    right: calc(-25% - 2rem);
-}
-
-.floating-number#left {
-    left: calc(-25% - 2rem);
-}*/
-
-
-/*main:nth-child(even) {
-    left: calc(-25% - 2rem);
-}
-*/
 
 .button {
     display: inline-block;
@@ -158,7 +150,7 @@ main > div:nth-child(odd)> .floating-number{
 #main h1 {
     color: white;
     width: 90%;
-    max-width: 8em;
+    max-width: 9em;
     line-height: 1.1;
     margin: 0 auto;
 }
@@ -175,17 +167,25 @@ main > div:nth-child(odd)> .floating-number{
 
 
 /*main 5*/
-#main-5 ul {
+.main-5 ul {
     list-style: none;
     margin: 3rem 0;
 }
 
-#main-5 ul li img {
-    max-width: 1rem;
-    margin-right: .5rem;
+.main-5 li {
+    position: relative;
 }
 
-#main-5 li {
+.main-5 ul li::before {
+    display: inline-block;
+    background-image: url('./assets/tick.svg');
+    background-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: '';
+}
+
+.main-5 li {
     margin: .5rem 0;
     font-size: 1.5rem;
 }
@@ -196,8 +196,16 @@ main > div:nth-child(odd)> .floating-number{
     position: relative;
 }
 
-#last-section img {
-    max-width: 100%;
+#last-section::before {
+    display: inline-block;
+
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+
+    width: 100%;
+    height: 20rem;
+
+    content: '';
 }
 
 #last-section .wrapper {
