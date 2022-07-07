@@ -75,33 +75,20 @@ header img {
 }
 
 #main h3,
-.main-1,
-.main-2,
-.main-3,
-.main-4,
-.main-5,
-.main-6 {
+main>div:nth-child(-n+7):not(:first-child) {
+
     width: 60%;
     max-width: 36rem;
     margin: auto;
-    padding: 5rem 0;
+    padding: 2rem 0;
     position: relative;
 }
 
-.main-1 img,
-.main-2 img,
-.main-3 img,
-.main-4 img,
-.main-5 img,
-.main-6 img {
+main>div:nth-child(-n+7):not(:first-child) img {
     max-width: 20%;
 }
 
-.main-1::after,
-.main-2::after,
-.main-3::after,
-.main-4::after,
-.main-5::after {
+main>div:nth-child(-n+7):not(:first-child, :nth-child(7), :last-child)::after {
     position: absolute;
     content: '';
     width: 25rem;
@@ -111,6 +98,9 @@ header img {
     left: calc(50% - 12.5rem);
 }
 
+/*
+
+
 .floating-number {
     font-family: 'montbold';
     font-size: 20rem;
@@ -119,7 +109,6 @@ header img {
     color: var(--cute-green);
     opacity: .3;
 }
-
 main>div:nth-child(even)>.floating-number {
     left: calc(-25% - 2rem);
 }
@@ -127,6 +116,30 @@ main>div:nth-child(even)>.floating-number {
 main>div:nth-child(odd)>.floating-number {
     right: calc(-25% - 2rem);
 }
+*/
+/*flotating number v2*/
+
+main>div:nth-child(-n+7):not(:first-child):before {
+    content: attr(section);
+    font-family: 'montbold';
+    font-size: 20rem;
+    position: absolute;
+    top: 8rem;
+    color: var(--cute-green);
+    opacity: .3;
+}
+
+main>div:nth-child(even)::before {
+    left: -24vw;
+}
+
+main>div:nth-child(odd)::before {
+    right: -24vw;
+}
+
+
+
+/*______________________________________*/
 
 .button {
     display: inline-block;
@@ -138,57 +151,52 @@ main>div:nth-child(odd)>.floating-number {
 }
 
 /*main 1*/
-#main {
+main>div:nth-child(1) {
     position: relative;
 }
 
-#main .wrapper {
+main>div:nth-child(1) .wrapper {
     position: absolute;
     width: 100%;
     top: 5rem;
 }
 
-#main h1 {
+main>div:nth-child(1) h1 {
     color: white;
     width: 90%;
     max-width: 9em;
     line-height: 1.1;
     margin: 0 auto;
+
 }
 
-#main h1 span {
+main>div:nth-child(1) h1 span {
     color: var(--bg-color);
 }
 
-#main img {
+
+main>div:nth-child(1) img {
     width: 100%;
+
 }
 
-/*main 2*/
-
-
-/*main 5*/
-.main-5 ul {
-    list-style: none;
+main>div h3 {
     margin: 3rem 0;
 }
 
-.main-5 li {
-    position: relative;
+
+
+/*main 5*/
+main>div:nth-child(6) ul {
+    list-style-image: url('./assets/tick.svg');
+    margin: 3rem auto;
+    padding-inline-start: 1ch;
 }
 
-.main-5 ul li::before {
-    display: inline-block;
-    background-image: url('./assets/tick.svg');
-    background-size: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    content: '';
-}
-
-.main-5 li {
+main>div:nth-child(6) li {
     margin: .5rem 0;
     font-size: 1.5rem;
+    text-align: left;
 }
 
 /* last section*/
@@ -203,39 +211,6 @@ main>div:nth-child(odd)>.floating-number {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-/*
-If we use this below, we have to add relative to 
-#last-section and absolute to #last-section.wrapper
-
-#last-section {
-    background-color: var(--cute-green);
-    position: relative;
-}
-
-#last-section .wrapper {
-    max-width: 30rem;
-    position: absolute;
-    top: calc(50% - 5rem);
-    left: calc(50% - 15rem);
-}
-
-#last-section::before {
-    display: inline-block;
-
-    background-image: url('./assets/bg.png');
-    background-size: cover;
-
-    width: 100%;
-    height: 20rem;
-
-    content: '';
-}
-*/
-
-#last-section .wrapper {
-    max-width: 30rem;
 }
 
 #last-section h2 {
