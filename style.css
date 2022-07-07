@@ -87,12 +87,13 @@ header img {
     padding: 5rem 0;
     position: relative;
 }
+
 .main-1 img,
 .main-2 img,
 .main-3 img,
 .main-4 img,
 .main-5 img,
-.main-6 img{
+.main-6 img {
     max-width: 20%;
 }
 
@@ -193,8 +194,20 @@ main>div:nth-child(odd)>.floating-number {
 /* last section*/
 #last-section {
     background-color: var(--cute-green);
-    position: relative;
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    
+    padding: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+/*
+If we use this below, we have to add relative to 
+#last-section and absolute to #last-section.wrapper
 
 #last-section::before {
     display: inline-block;
@@ -207,12 +220,10 @@ main>div:nth-child(odd)>.floating-number {
 
     content: '';
 }
+*/
 
 #last-section .wrapper {
     max-width: 30rem;
-    position: absolute;
-    top: calc(50% - 5rem);
-    left: calc(50% - 15rem);
 }
 
 #last-section h2 {
@@ -220,7 +231,6 @@ main>div:nth-child(odd)>.floating-number {
 }
 
 #last-section .button {
-    display: inline-block;
     background: var(--bg-color);
     margin: 1rem 0;
 
