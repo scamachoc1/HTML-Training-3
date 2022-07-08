@@ -38,6 +38,7 @@ h3 {
     border-radius: 10rem;
     padding: 1rem 2.7rem;
     margin: 3rem 0rem;
+    background: var(--cute-green);
 }
 
 p {
@@ -98,27 +99,6 @@ main>div:nth-child(-n+7):not(:first-child, :nth-child(7), :last-child)::after {
     left: calc(50% - 12.5rem);
 }
 
-/*
-
-
-.floating-number {
-    font-family: 'montbold';
-    font-size: 20rem;
-    position: absolute;
-    top: calc(18% - 10rem);
-    color: var(--cute-green);
-    opacity: .3;
-}
-main>div:nth-child(even)>.floating-number {
-    left: calc(-25% - 2rem);
-}
-
-main>div:nth-child(odd)>.floating-number {
-    right: calc(-25% - 2rem);
-}
-*/
-/*flotating number v2*/
-
 main>div:nth-child(-n+7):not(:first-child):before {
     content: attr(section);
     font-family: 'montbold';
@@ -137,17 +117,17 @@ main>div:nth-child(odd)::before {
     right: -24vw;
 }
 
-
-
-/*______________________________________*/
-
-.button {
-    display: inline-block;
-    font-size: 1rem;
-    border-radius: 10rem;
-    padding: 1rem 2.7rem;
-    margin: 3rem 0rem;
-    background: var(--cute-green);
+@media(min-width: 800px) {
+    /*
+    Max width of the parent is 36rem so we take that and 
+    substract it from the viewport width for it to be at the side 
+    */
+    main>div:nth-child(even)::before {
+        left: calc(-1.5rem - ((100vw - 36rem)/2));
+    }
+    main>div:nth-child(odd)::before {
+        right: calc(-1.5rem - ((100vw - 36rem)/2));
+    }
 }
 
 /*main 1*/
@@ -191,12 +171,13 @@ main>div:nth-child(6) ul {
     list-style-image: url('./assets/tick.svg');
     margin: 3rem auto;
     padding-inline-start: 1ch;
+    list-style-position: inside;
 }
 
 main>div:nth-child(6) li {
     margin: .5rem 0;
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 /* last section*/
